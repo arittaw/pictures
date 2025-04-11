@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState } from "react"
 import './SearchBar.css'
 
-function SearchBar({onSubmit}) {
-    const {term, setTerm} = useState('')
+const SearchBar = ({onSubmit}) => {
+    const [term, setTerm] = useState('')
 
     const handleFormSubmit = (event) => {
-        event.PreventDefault()
+        event.preventDefault()
         console.log('necesito el componente sopbre los datos')
         onSubmit(term)
     }
